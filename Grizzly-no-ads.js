@@ -6,6 +6,7 @@
 // @author       Grizzly
 // @match        http://www.sohu.com/
 // @match        https://gitee.com/
+// @include         *://www.sohu.com/a*
 // @grant        none
 // ==/UserScript==
 
