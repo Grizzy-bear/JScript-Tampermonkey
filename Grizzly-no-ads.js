@@ -31,6 +31,11 @@ var refreshTime = 500;
             $('.ent-poster').remove();
 		}, refreshTime)
 		clearInterval(null)
+	};
+	//清楚搜狐广告
+	if(pageHost == "www.sohu.com"){
+			/* body... */
+			$('#right-side-bar').remove() //删除左侧
 	}
 
 })();
