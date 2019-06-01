@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       Grizzly
-// @match        http://www.sohu.com/a/295529444_197250
+// @match        http://www.sohu.com/
 // @match        https://gitee.com/
 // @grant        none
 // ==/UserScript==
