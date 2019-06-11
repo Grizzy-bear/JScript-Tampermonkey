@@ -8,6 +8,7 @@
 // @match        https://gitee.com/
 // @include         *://www.sohu.com/a*
 // @grant        none
+// @note   11/06/2019  删除了搜狐下方的广告
 // ==/UserScript==
 
 
@@ -36,7 +37,12 @@ var refreshTime = 500;
 	//清楚搜狐广告
 	if(pageHost == "www.sohu.com"){
 			/* body... */
-			$('#right-side-bar').remove() //删除左侧
+			$('#right-side-bar').remove(); //删除左侧
+			$('.groom-read').remove();
+			$('.article-recom').remove();
 	}
 
 })();
+
+
+// bak
