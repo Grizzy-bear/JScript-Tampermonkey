@@ -7,12 +7,13 @@
 // @match        http://www.sohu.com/
 // @match        https://gitee.com/
 // @include         *://www.sohu.com/a*
-// @include         *://mail.163.com/*
 // @include         *://ac.qq.com/*
+// @include         *://www.360doc.com/*
 // @grant        none
 // @note   11/06/2019  删除了搜狐下方的广告
 // @note   15/06/2019  删除了网易邮箱下方的广告
 // @note   16/06/2019  关闭网易邮箱广告，腾讯漫画付费观看
+// @note   18/06/2019  删除360文库广告
 
 // @require    https://cdn.bootcss.com/jquery/3.4.1/jquery.js
 // @require    https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js
@@ -51,8 +52,6 @@
 	}
 	// 清楚网易邮箱网页广告
 	// var href_reg = new RegExp(/https\:\/\/mail.163.com\/js6\/main.jsp/);
-
-	
 	// 去除漫画限制
 	if (pageHost == "ac.qq.com"){
         window.delads = function (){
@@ -61,8 +60,16 @@
         window.setTimeout("delads()", 60);
         window.setTimeout(function() { document.querySelector('#checkVipFrame').remove(); document.querySelector('#roastBarWrap > div.roast-bar').remove();}, 60);
 
-    };
+	};
+	// 删除360文库广告
+	if (pageHost == "www.360doc.com"){
+        // window.delads = function (){
+        //     document.querySelector('#iframeMask').remove();
+        // }
+        // window.setTimeout("delads()", 60);
+        window.setTimeout(function() { document.querySelector('.a_right').remove();document.querySelector('.header').remove();}, 60);
 
+    };
 })();
 
 
