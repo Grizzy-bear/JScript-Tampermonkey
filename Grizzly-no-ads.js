@@ -9,11 +9,14 @@
 // @include         *://www.sohu.com/a*
 // @include         *://ac.qq.com/*
 // @include         *://www.360doc.com/*
+// @include         *://www.jb51.net/softs*
+
 // @grant        none
 // @note   11/06/2019  删除了搜狐下方的广告
 // @note   15/06/2019  删除了网易邮箱下方的广告
 // @note   16/06/2019  关闭网易邮箱广告，腾讯漫画付费观看
 // @note   18/06/2019  删除360文库广告
+// @note   14/07/2019  删除脚本之家下载界面的广告
 
 // @require    https://cdn.bootcss.com/jquery/3.4.1/jquery.js
 // @require    https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js
@@ -69,7 +72,16 @@
         // window.setTimeout("delads()", 60);
         window.setTimeout(function() { document.querySelector('.a_right').remove();document.querySelector('.header').remove();}, 60);
 
-    };
+	};
+	if(pageHost == "www.jb51.net"){
+		// 删除软件页面部分的广告
+		var softsAddress = "https://" + pageHost + "/softs" ;
+		var KeyWord = new RegExp('/softs/')
+		if(KeyWord.test(pageHref) == true){
+			window.setTimeout(function() { document.querySelector('.tonglan').remove();}, 60);
+		}
+		
+	};
 })();
 
 
