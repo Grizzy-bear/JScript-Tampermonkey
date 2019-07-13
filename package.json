@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "#### Function",
   "main": "Grizzly-no-ads.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "cz-conventional-changelog": "^2.1.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/Grizzy-bear/JScript-Tampermonkey/issues"
   },
-  "homepage": "https://github.com/Grizzy-bear/JScript-Tampermonkey#readme"
+  "homepage": "https://github.com/Grizzy-bear/JScript-Tampermonkey#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
